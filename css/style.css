@@ -4,6 +4,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
 
 body{
   font-family: 'Arial', sans-serif;
@@ -40,15 +44,17 @@ body{
 }
 
 .works__inner{
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 100%;
 }
 
 .works__card{
+  width: 30%;
   max-width: 370px;
   max-height: 370px;
   background: #FEFEFE;
@@ -58,10 +64,6 @@ body{
   margin-right: 30px;
   margin-bottom: 30px;
   position: relative;
-}
-
-.works__card:nth-child(3n){
-  margin-right: 0;
 }
 
 .works__card:hover{
@@ -104,13 +106,8 @@ body{
     margin-top: 115px;
   }
   .works__card{
+    width: 45%;
     margin-bottom: 50px;
-  }
-  .works__card:nth-child(3n){
-    margin-right: 30px;
-  }
-  .works__card:nth-child(2n){
-    margin-right: 0;
   }
 }
 
@@ -137,14 +134,18 @@ body{
     width: 55px;
     height: 55px;
   }
-  .works__card:nth-child(3n){
-    margin-right: 27px;
-  }
-  .works__card:nth-child(6n){
-    margin-right: 0px;
-  }
+  
   .works__card-text{
     margin: 17px 30px;
+  }
+}
+
+@media (max-width: 539px){
+  .container{
+    width: 380px;
+  }
+  .works__card{
+    width: 100%;
   }
 }
 
@@ -159,7 +160,8 @@ body{
     margin-bottom: 29px;
   }
   .works__card{
-    max-width: 100%;
+    width: 100%;
+    max-width: 280px;
     max-height: 280px;
     margin: 0;
     margin-bottom: 24px;
@@ -179,3 +181,4 @@ body{
     margin: 14px 14px 14px 25px;
   }
 }
+
